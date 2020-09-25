@@ -1,0 +1,17 @@
+body {
+	display: grid;
+  	grid-template-columns: 3fr 7fr;
+  	margin:0px;
+}
+
+#Resume {
+	grid-column-start: 1;
+	background-color: red;
+	position: sticky;
+}
+
+#Scroll {
+
+	grid-column-start: 2;
+	background-color: blue;
+}
