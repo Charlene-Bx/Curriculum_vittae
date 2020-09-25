@@ -1,17 +1,133 @@
+/* -- G E N E R A L ------------------------------------------------------------ */
 body {
-	display: grid;
-  	grid-template-columns: 3fr 7fr;
-  	margin:0px;
+	display: flex;
+	flex-direction: row;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
 }
 
+.liste{
+	list-style: none;
+}
+
+.link{
+	text-decoration: none;
+	color:#732238;
+}
+
+.link:hover{
+	text-decoration: none;
+	color:#F24150;
+}
+
+.link:active{
+	text-decoration: none;
+	color:#262120;
+}
+
+.icone{
+	font-size: 3vw;
+	display: inline-flex;
+	margin: auto;
+	padding: 1px;
+}
+
+i{
+	padding: 4px;
+}
+
+
+/* -- G A U C H E ------------------------------------------------------------ */
 #Resume {
-	grid-column-start: 1;
-	background-color: red;
-	position: sticky;
+	height: 100%;
+	width: 29%;
+	overflow: hidden;
+	background-color: #38B787;
+	position: fixed;
+	color:#262120;
+	padding: 1% 3% 3% 3%;
+	z-index: 1;
 }
 
-#Scroll {
+#Presentation {
+	display:grid;
+	grid-template-columns: 30% 70%;
+}
 
+#Photo {
+	grid-column: 1;
+	margin: auto;
+	background-image: url(images/Charlene.jpg);
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background-size: cover;
+	border: 2px solid #262120;
+
+}
+
+#Nom {
+	grid-column: 2;	
+	margin:0px 0px 0px 40px;
+}
+
+h1{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: initial;
+	font-size: 7vh;
+	text-transform: uppercase;
+	line-height: 2px;
+}
+
+h2{
+	font-family: 'Parisienne', cursive;
+	font-size: 6vh;
+	line-height: 20px;
+}
+
+h3{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 5% 0% 0% 5%;
+}
+
+.box1{
+	background-color: #64DFA6;
+	padding: 2% 4% 2% 4%; 
+	margin: -3% 5% 0% 5%;
+	font-size: 15px;
+	border-radius: 7px;
+}
+
+/* -- O N G L E T ------------------------------------------------------------ */
+#Onglet{
+	color: #64DFA6;
+	z-index: 2;
+	width: 4%;
+	height: 36vh;
+	background-color: #38B787;
+	margin: 0% 0% 0% 34%;
+	position: fixed;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	text-transform: uppercase;
+	border-radius: 0px 8px 8px 0px;
+}
+
+#Italic{
+	font-weight: lighter;
+}
+
+h4{
+	padding: 5% 0% 0% 0%
+}
+/* -- D R O I T E ------------------------------------------------------------ */
+#Scroll {
+	margin: 0% 0% 0% 30%;
+	padding: 0% 0% 0% 11%;
+	width: 59%;
 	grid-column-start: 2;
-	background-color: blue;
+	background-color: #262120;
+	position: relative;
 }

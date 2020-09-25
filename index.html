@@ -5,8 +5,7 @@
 	<title>Charlène Bonnardeaux</title>
 	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;800&family=Parisienne&display=swap" rel="stylesheet"> 
 	<script src="https://kit.fontawesome.com/c52a326ad1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,32 +15,41 @@
 
 <section id="Resume">
 
-	<header>
-		<img src="" alt="CBX"></img>
-		<h1>Bonnardeaux</h1>
-		<h2>Charlene</h2>
-	</header>
+	<header id="Presentation">
 
-<!------------------------------- I C O N E ------>
-	<article class="outbox" id="Icone">
-		<ul>
+		<div id="Photo">
+		<!--photo en css-->
+		</div>
+
+
+		<div id="Nom">
+
+		<h1>Bonnardeaux</h1>
+		<h2>Charlène</h2>
+
+		<!--Icones-->
+		<ul class="liste icone">
 			<li>
-				<a class="link" href="">
+				<a class="link" href="https://www.linkedin.com/" target="_blank">
 					<i class="fab fa-linkedin"></i>
 				</a>
 			</li>
 			<li>
-				<a class="link" href="">
+				<a class="link" href="https://github.com/Charlene-Bx target="_blank"">
 					<i class="fab fa-github-square"></i>
 				</a>
 			</li>
 		</ul>
-	</article>
+		</div>
+
+	</header>
+
+
 
 
 <!--------------- I N F O   P R A T I Q U E  ----->
-	<article class="box" id="Info">
-		<h3>Info</h3>
+	<h3>Infos</h3>
+	<article class="box1" id="Info">
 		<p>Born on <strong>28/09/92</strong> in Saint-Ghislain,</br>
 		of <strong>Belgian</strong> nationality.</br>
 		Domiciled at
@@ -50,22 +58,21 @@
 	</article>
 
 <!------------------------- C O N T A C T  ----->
-	<article class="box" id="Contact">
-		<h3>Info</h3>
-
-		<ul>
+	<h3>Contact</h3>
+	<article class="box1" id="Contact">
+		<ul class="liste icone">
 			<li>
-				<a class="icone" href="">
+				<a class="link" href="" target="_blank">
 					<i class="fas fa-phone-square-alt"></i>
 				</a>
 			</li>
 			<li>
-				<a class="icone" href="">
+				<a class="link" href="" target="_blank">
 					<i class="fab fa-discord"></i>
 				</a>
 			</li>
 						<li>
-				<a class="icone" href="">
+				<a class="link" href="" target="_blank">
 					<i class="fas fa-envelope-square"></i>
 				</a>
 			</li>
@@ -91,11 +98,11 @@
 
 	</hr>
 
-	<div id="Onglet">
-		<h4><strong>Web Devlopper</strong>(junior)</h4>
+</section>
+		<div id="Onglet">
+		<h4><strong>Web Devlopper</strong><span id="Italic"> (junior)</span></h4>
 	</div>
 
-</section>
 
 <!------------------------- C O M P E T E N C E S  ----->
 <section id="Scroll">
@@ -106,7 +113,7 @@
 
 		<div>
 			<h6>Formation</h6>
-			<ul>
+			<ul class="liste">
 				<li>Stylisme & Modelisme (Haute Ecole Francisco Ferrer - Bruxelles )</li>
 				<li>Illustration Narative (Ecole Supérieure des Beaux-arts - Bruxelles)</li>
 				<li>Communication Visuelle (Haute Ecole Carré des Arts - Mons)</li>
@@ -116,7 +123,7 @@
 
 		<div>
 			<h6>Career</h6>
-			<ul>
+			<ul class="liste">
 				<li>Vendeuse (Catimini-Bruxelles)</li>
 				<li>Stagiaire/Assistante (Musée le Grand-Hornu-Mons)</li>
 				<li>Responsable Bar (Cafe Maison du Peuple Saint-Gilles)</li>
@@ -172,7 +179,7 @@
 	<!--portfolio-->
 	<article id="Portfolio">
 
-		
+
 		<h6>Portfolio</h6>
 		<div>
 			<p>Personal Site</p>
