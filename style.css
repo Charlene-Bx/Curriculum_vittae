@@ -125,9 +125,29 @@ h4{
 /* -- D R O I T E ------------------------------------------------------------ */
 #Scroll {
 	margin: 0% 0% 0% 30%;
-	padding: 0% 0% 0% 11%;
-	width: 59%;
+	padding: 0% 0% 0% 0%;
+	width: 70%;
 	grid-column-start: 2;
 	background-color: #262120;
 	position: relative;
+}
+
+#Training{
+	background-color: #CF5A65;
+	padding: 0% 0% 0% 15%;
+}
+
+#speaking{
+	background-color: #C2285E;
+	padding: 0% 0% 0% 15%;
+}
+
+#Language{
+	background-color: #A11F30;
+	padding: 0% 0% 0% 15%;
+}
+
+#Portfolio{
+	background-color: #7A3B47;
+	padding: 0% 0% 0% 15%;
 }
