@@ -60,7 +60,7 @@
 <!------------------------- C O N T A C T  ----->
 	<h3>Contact</h3>
 	<article class="box1" id="Contact">
-		<ul class="liste icone">
+		<ul class="liste icone" id="Icontact">
 			<li>
 				<a class="link" href="" target="_blank">
 					<i class="fas fa-phone-square-alt"></i>
@@ -77,7 +77,6 @@
 				</a>
 			</li>
 		</ul>
-
 		<!--formulaire de contact-->
 		<form class="formulaire">
     		<label for="name">
@@ -93,7 +92,7 @@
 			</label><br />
 		</form> 
 
-		<input id="submit_button" type="submit" value="Send email" />
+		<input class="bouton" type="submit" value="Send email" />
 	</article>
 
 	</hr>
@@ -106,53 +105,64 @@
 
 <!------------------------- C O M P E T E N C E S  ----->
 <section id="Scroll">
-	<article id="Training">
+	
 
 		<!--training-->
-		<h5>Training</h5>
+		<h5>Curriculum Vitae</h5>
+<article id="Training">
 
-		<div>
-			<h6>Formation</h6>
-			<ul class="liste">
-				<li>Stylisme & Modelisme (Haute Ecole Francisco Ferrer - Bruxelles )</li>
-				<li>Illustration Narative (Ecole Supérieure des Beaux-arts - Bruxelles)</li>
-				<li>Communication Visuelle (Haute Ecole Carré des Arts - Mons)</li>
-				<li>Formation Web Devellopement (Becode - Bruxelles)</li>
-			</ul>
-		</div>
+	<h6 class="row2">Formation</h6>
+			<div id="Studies">
+				<p>Studies:</p>
+				<ul class="liste">
+					<li><strong>Stylisme & Modelisme </strong></br> 
+						<span class="details">(Haute Ecole Francisco Ferrer - Bruxelles )</span></li>
+					<li><strong>Illustration Narative </strong></br>
+						<span class="details">(Ecole Supérieure des Beaux-arts - Bruxelles)</span></li>
+					<li><strong>Communication Visuelle </strong></br>
+						<span class="details">(Haute Ecole Carré des Arts - Mons)</span></li>
+					<li><strong>Web Devellopement </strong></br>
+						<span class="details">(Becode - Bruxelles)</span></li>
+				</ul>
+			</div>
 
-		<div>
-			<h6>Career</h6>
-			<ul class="liste">
-				<li>Vendeuse (Catimini-Bruxelles)</li>
-				<li>Stagiaire/Assistante (Musée le Grand-Hornu-Mons)</li>
-				<li>Responsable Bar (Cafe Maison du Peuple Saint-Gilles)</li>
-				<li>
-					<label class="required" for="newpost">
-    				<input type="text" id="newpost" class="input" name="newpost" size="20" value="Add your entreprise"/>
-    				</label><br />
-				</li>
-			</ul>
-		</div>
+			<div id="Career">
+				<p>Career:</p>
+				<ul class="liste">
+					<li><strong>Vendeuse</strong></br>
+					<span class="details">(Catimini-Bruxelles)</span></li>
+					<li><strong>Stagiaire/Assistante</strong></br>
+					<span class="details">(Musée le Grand-Hornu-Mons)</span></li>
+					<li><strong>Responsable Bar</strong></br>
+					<span class="details">(Cafe Maison du Peuple Saint-Gilles)</span></li></br>
+					<li>
+						<label for="newpost">
+    						<input type="text" id="newpost" class="input" name="newpost" size="20" value="Add your entreprise"/>
+    						<input class="bouton" type="submit" value="Give me a job" />
+    					</label><br />
+					</li>
+				</ul>
+			</div>
 	</article>
 
 	<!--speaking-->
-	<article id="speaking">
+	<article id="Speaking">
 		<h6>I speak...</h6>
+
 		<div>
-			<p>French, tout le temps, c'est ma langue maternelle!</p>
+			<p><strong>French,</strong></br> tout le temps, c'est ma langue maternelle!</p>
 		</div>
 			
 		<div>
-			<p>Spanish, lo entiendo más de lo que hablo, pero me las arreglo</p>
+			<p><strong>Spanish,</strong></br> lo entiendo más de lo que hablo, pero me las arreglo</p>
 		</div>
 			
 		<div>
-			<p>Ingles, i am not very comfortable speaking, I prefer to write</p>
+			<p><strong>Ingles,</strong></br> i am not very comfortable speaking, I prefer to write</p>
 		</div>
 			
 		<div>
-			<p>Dutch, Ik droom ervan om het te leren! Ondertussen ken ik een paar woorden</p>
+			<p><strong>Dutch,</strong></br> Ik droom ervan om het te leren! Ondertussen ken ik een paar woorden</p>
 		</div>
 	</article>
 
@@ -161,18 +171,43 @@
 		<h6>Language</h6>
 		<div>
 			<p>Html</p>
+			<div class="progress-circle">
+    			<div class="progress-masque">
+        			<div class="progress-barre"></div>
+        		<div class="progress-sup50"></div>
+    		</div>
 		</div>
+	</div>
 			
 		<div>
 			<p>Css</p>
+			<div class="progress-circle">
+    			<div class="progress-masque">
+        			<div class="progress-barre"></div>
+        		<div class="progress-sup50"></div>
+    		</div>
 		</div>
+	</div>
+
 			
 		<div>
 			<p>JavaScript</p>
+			<div class="progress-circle">
+    			<div class="progress-masque">
+        			<div class="progress-barre"></div>
+        		<div class="progress-sup50"></div>
+    		</div>
+		</div>
 		</div>
 			
 		<div>
 			<p>Php</p>
+			<div class="progress-circle">
+    			<div class="progress-masque">
+        			<div class="progress-barre"></div>
+        		<div class="progress-sup50"></div>
+    		</div>
+		</div>
 		</div>
 	</article>
 
