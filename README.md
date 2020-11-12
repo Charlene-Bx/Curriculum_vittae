@@ -1,4 +1,4 @@
-[L I N K](https://charlene-bx.github.io/0.1_PersonalWork/)
+[L I N K](https://charlene-bx.github.io/0.2_MonCV/)
 
 ### ABOUT
 Réalisation d'un CB interactif.
