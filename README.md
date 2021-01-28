@@ -1,5 +1,5 @@
 [L I N K](https://charlene-bx.github.io/0.2_MonCV/)
-[version desktop](https://zupimages.net/viewer.php?id=21/04/siph.png][img]https://zupimages.net/up/21/04/siph.png)
+[version desktop](https://zupimages.net/up/21/04/siph.png)
 ### ABOUT
 CV interactif de Charlène Bonnardeaux.
 
