@@ -1,0 +1,20 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Curriculum Vitae de Charlène Bonnardeaux",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./asset/style/base/:./asset/style/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charlene-Bx/0.2_MonCV.git"
+  },
+  "author": "Charlène Bonnardeaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charlene-Bx/0.2_MonCV/issues"
+  },
+  "homepage": "https://github.com/Charlene-Bx/0.2_MonCV#readme",
+  "dependencies": {}
+}

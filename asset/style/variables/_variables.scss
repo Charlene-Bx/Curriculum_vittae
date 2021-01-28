@@ -1,0 +1,57 @@
+// V A R I A B L E S /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// _ FONTS
+$open: 'Open Sans', sans-serif;
+$roboto: 'Roboto Slab', serif;
+// _COLORS
+$color: #da7b48;
+$grey: rgb(23, 24, 24);
+
+$nuance-grey:(
+	ligth0:lighten($grey, 3%),
+	ligth1:lighten($grey, 10%),
+	ligth2:lighten($grey, 17%),
+	ligth3:lighten($grey, 20%),
+);
+
+$nuance-color:(
+	ligth0:lighten($color, 0%),
+    ligth1:lighten($color, 15%),
+    ligth2:lighten($color, 25%),
+    ligth3:lighten($color, 55%)
+);
+
+$image:(
+	tête1:"../images/Moi1.png",
+	bulle:"../images/Click.png",
+	labels:"../images/labels.png",
+	progress_punt:"../images/Progress_punt.png",
+	on_off:"../images/on_off.svg",
+	template1:"../images/template1.jpg",
+	template2:"../images/template2.jpg",
+);
+
+
+
+// M I X I N S ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin section-shadow{
+	//ombre en bas
+	box-shadow: 4px 22px 19px -20px rgba(0, 0, 0, 0.516),
+
+	//ombre à droite
+	12px 8px 15px -5px #000000a8;
+
+
+};
+
+@mixin onglet-shadow{
+	// ombre à droite
+	box-shadow: 14px 6px 13px -3px rgba(0, 0, 0, 0.516);
+}
+
+@mixin div-image($url,$size){
+	background-image: url(map-get($image,$url));
+	background-size: $size;
+	background-repeat: no-repeat;
+};

@@ -1,0 +1,71 @@
+// SPAN //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.quote{
+    color:white;
+    font-size: 5em;
+    display: block;
+    position: absolute;
+    &#quote_1{
+        top: 63%;
+        left: 6%;
+    }
+    &#quote_2{
+        right: 12%;
+        top: 82%;
+    }
+};
+
+.orange{
+    color: map-get($nuance-color, ligth1);
+}
+
+.italic{
+    font-style: italic;
+}
+
+
+// ICONES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.grande_icone{
+    font-size: 5em;
+    color: white;
+}
+
+.medium_icone{
+    font-size: 2.5em;
+    color: white;
+
+    &.grey{
+        color: map-get($nuance-grey, ligth1 );
+    }
+}
+
+.little_icone{
+    font-size: 1.3em;
+    color: map-get($nuance-color, ligth1);
+};
+
+// BOUTONS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.more{
+    width: 40%;
+    justify-content: center;
+    height: 100%;
+}
+
+.ico_slide{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+
+    .punt_blc{
+        @include div-image(on_off,cover);
+        background-position-x: 100%;
+
+        width: 7%;
+        height: 100%;
+        margin: 0% 2% 0% 2%;
+
+    };
+}
+
+

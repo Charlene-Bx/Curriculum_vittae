@@ -1,0 +1,49 @@
+#competences{
+		
+    background-color: map-get($nuance-grey,ligth3);
+    z-index: 6;
+    
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    //Onglet replié
+    // right: 1150px;
+
+    #compet_part1{
+        grid-column: 1/span 1;
+
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+
+        background-color: darken(map-get($nuance-grey,ligth3),4%);
+        clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+
+        padding: 5% 12% 0% 12%;
+    }
+    
+    #compet_part2{
+        grid-column: 2/span 1;
+
+        display: grid;
+        grid-template-rows: 40% 60%;
+
+        box-sizing: border-box; 
+        padding: 5% 25% 5% 10%;
+
+        #langues{
+            grid-row: 1/span 1;
+        };
+
+        #soft_skills{
+            grid-row: 2/span 1;
+        }
+
+        .liste{
+            width: 100%;
+
+            .no_deco{
+                list-style: none;
+            }
+        } 
+    }
+}
