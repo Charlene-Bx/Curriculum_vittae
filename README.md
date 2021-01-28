@@ -1,18 +1,13 @@
 [L I N K](https://charlene-bx.github.io/0.2_MonCV/)
-
+[version desktop](https://zupimages.net/viewer.php?id=21/04/siph.png][img]https://zupimages.net/up/21/04/siph.png)
 ### ABOUT
-Réalisation d'un CB interactif.
+CV interactif de Charlène Bonnardeaux.
 
 ### TO DO
-* Peaufinner le design
-* rendre le cv responsive et en faire une version mobile
-* Rendre le cv réelement interactif avec Javascript
-* Ajouter un element  original à ce CV (jeu,API,...)
-* Harmoniser le personnal branding de mon linkedin avec celui de ce cv
+* Version mobile et responsive
+* Adapter le Javascript en fonction de l'ecran
+* Ajouter le jeu à la version desktop
 
-### FOR
-Ajouter à mon [LinkedIn](https://www.linkedin.com/in/charlene-bonnardeaux/).
-
-### WHO
-Charlène Bonnardeaux
+### WHAT
+Réaliser en HTML5, CSS3 (SASS) et JavaScript
 
