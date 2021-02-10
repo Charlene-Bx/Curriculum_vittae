@@ -1,76 +1,8 @@
 
 if(screen.width <= 768 || document.body.clientWidth <= 768){
-
+    console.log('onglet.js')
     const onglets= document.querySelectorAll('.onglet');
-    const nb_onglets= onglets.length-1;
-
-    //Si l'écran est en mobile, l'affichage change et les onglets sont tous dépliés, il faut changer les datas folded
-    let change_data= true;
-    if(change_data){
-        onglets.forEach(onglet=>onglet.dataset.folded='false');
-        change_data=false;
-    };
-
-    
-    //pour chacuns des onglets
-    onglets.forEach((onglet,index,array)=>{
-
-        //on ajoute un ecouteur d'evenement 'click
-        onglet.addEventListener('click',()=>{
-
-            //A chaque click sur un onglet, on verifie l'etat de sa data 'folded'
-            let folded= onglet.dataset.folded;
-
-            //A chaque click sur un onglet, on selection sa section, et on determine la largeur de la fenetre
-            let section_width= onglet.previousElementSibling.children[0].clientWidth;
-
-            //en fonction de si l'onglet est 'folded:false' ou 'falded:true'
-            switch(folded){
-
-                case 'false':
-
-                    //Si l'onglet n'est pas le dernier, alors de l'onglet jusqu'au premier, on les replie
-                    if(index != nb_onglets){
-                        for(let x=index-1 ; x>=0 ; x--){
-                            //si x=0, le premier onglet, c'est son parent qu'il faut deplacer, pas l'enfant
-                            if(x===0){
-                                array[x].previousElementSibling.style.right=`${section_width}px`;
-                            }else{
-                                array[x].previousElementSibling.children[0].style.right=`${section_width}px`;
-                            }
-                            array[x].style.gridColumn= '1/span 1';
-                            array[x].dataset.folded= 'true';
-                        };
-                    };
-                    break;
-
-                case 'true':
-                    //si l'onglet est replié, alors, de l'onglet jusqu'au dernier, on les deplie
-                    for(let x=index ; x<= nb_onglets; x++){
-                        if(index === 0){
-                            onglet.previousElementSibling.style.right='';
-                        }else{
-                            array[x].previousElementSibling.children[0].style.right='';
-                        };
-
-                        array[x].style.gridColumn= '3/span 1';
-                        array[x].dataset.folded= 'false';   
-                    };
-                    break;
-            }
-
-        })
-    })
-
-}else{
-    const onglets= document.querySelectorAll('.onglet');
-    const nb_onglets= onglets.length-1;
-
-    let change_data= true;
-    if(change_data){
-        onglets.forEach((onglet,index)=>{index!==0?onglet.dataset.folded='false':null});
-        change_data=false;
-    }; 
+    const nb_onglets= (onglets.length)-1;
 
 
 // FONCTIONS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -121,6 +53,9 @@ if(screen.width <= 768 || document.body.clientWidth <= 768){
         let section= onglet.previousElementSibling.children[0]; 
         let section_width= section.clientWidth;
         let folded= onglet.dataset.folded;
+
+
+        
 
         onglet.addEventListener('mouseover',()=>{AnimOnglet(onglet, index, section);});
         onglet.addEventListener('mouseout',()=>{ReturnOnglet(onglet, index, section);});
@@ -198,8 +133,18 @@ if(screen.width <= 768 || document.body.clientWidth <= 768){
             
         })
 
-    });
+        switch(folded){
+            case 'true':
+                //si c'est 'true', deplace l'onglet à la premiére colonne
+                onglet.style.gridColumn= '1/1';
+                //deplace la section de sa largeur vers la gauche
+                section.style.right= `${section_width}px`;
+                break;
 
-    
-};
-    
+            case 'false':
+                onglet.style.gridColumn= '3/3';
+                section.style.right= '0px';
+                break;
+        };
+    });
+}

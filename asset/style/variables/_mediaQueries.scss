@@ -1,25 +1,27 @@
 // V A R I A B L E S /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
+$break-point:(
+	mobile: 576px,
+	tablet: 768px,
+	laptop: 1024px,
+	desktop: 1200px,	
+)!default;
 
 // M I X I N S ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@mixin sm {
-	@media only screen and (max-width: #{$screen-sm-min}) {@content;}
+@mixin tablet {
+	@media (min-width: 596px) and (max-width: 768px) {
+		@content
+	  }
 };
 
-@mixin md {
-	@media (max-width: #{$screen-md-min}) {@content;}
+@mixin laptop {
+	@media (min-width: 769px) and (max-width: 992px) {
+		@content
+	  }
 };
 
-@mixin lg {
-	@media (max-width: #{$screen-lg-min}) {@content;}
-};
- 
-@mixin xl {	
-	@media (max-width: #{$screen-xl-min}) {@content;}
-};
+@mixin desktop {
+	@media (min-width: 992px){
+		@content
+	  }
+}

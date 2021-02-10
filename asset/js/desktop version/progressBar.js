@@ -1,5 +1,5 @@
 // PROGRESS BAR ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const progress = document.querySelectorAll('.b_progress');
+const progress = document.querySelectorAll('.progress');
 
 progress.forEach((bar)=>{
     const pourcentage= bar.dataset.progress;

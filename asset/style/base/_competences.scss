@@ -1,49 +1,118 @@
 #competences{
-		
-    background-color: map-get($nuance-grey,ligth3);
+	height: 100%;
+    background-color: darken(map-get($nuance-grey,ligth3),4%);
     z-index: 6;
-    
-    display: grid;
-    grid-template-columns: 55% 45%;
-
-    //Onglet replié
-    // right: 1150px;
+    box-sizing: border-box;
+    overflow: scroll;
+    @include desktop{ 
+        overflow: hidden;   
+        display: grid;
+        grid-template-columns: 55% 45%;
+        background-color: map-get($nuance-grey,ligth3);}
 
     #compet_part1{
+
+    height: fit-content;
+    padding: 15% 10% 15% 18%;
+    background-color: map-get($nuance-grey,ligth3);
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);  
+    @include tablet {padding: 6% 10% 15% 18%;};
+    @include laptop {padding: 0% 10% 20% 18%;}
+    @include desktop {
         grid-column: 1/span 1;
-
-        display: grid;
-        grid-template-rows: 25% 25% 25% 25%;
-
         background-color: darken(map-get($nuance-grey,ligth3),4%);
         clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
-
         padding: 5% 12% 0% 12%;
+        }
     }
     
     #compet_part2{
-        grid-column: 2/span 1;
-
         display: grid;
-        grid-template-rows: 40% 60%;
+        grid-template-rows: 20% 80%;
 
-        box-sizing: border-box; 
-        padding: 5% 25% 5% 10%;
-
+        font-size: 4vw;
+        @include tablet {font-size: 2.8vw;}
+        @include laptop {font-size: 1.7vw;grid-template-rows: 15% 1fr;}
+        @include desktop {
+            grid-column: 2/span 1;
+            display: grid;
+            grid-template-rows: 40% 60%;
+            box-sizing: border-box; 
+            padding: 5% 9% 5% 10%;
+            font-size: 1vw;
+        }
         #langues{
-            grid-row: 1/span 1;
+            box-sizing: border-box;
+            padding: 0% 15%;
+            height: 100%;
+            align-items: center;
+            @include laptop {padding: 0% 25%;margin-top: 5%};
+            @include desktop {grid-row: 1/span 1;}
+            .grande_icone{
+                display:none;
+                @include desktop {display: initial}
+            };
         };
 
         #soft_skills{
-            grid-row: 2/span 1;
+            background-color: map-get($nuance-grey,ligth3);
+            clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+            box-sizing: border-box;
+            padding:15%;
+            height: 100%;
+            @include laptop {clip-path: polygon(50% 14%, 100% 0, 100% 100%, 0 100%, 0 0);}
+            @include desktop {clip-path: unset;grid-row: 2/span 1;padding:0% 15%;}
+
+        }
+    };
+
+    .subSection{
+        display:flex;
+        align-items: center;
+
+        height: 13vh;
+
+        margin-bottom: 15%;
+        @include laptop {
+            #graph_hardSkills{
+                display:none;
+            }
+        };
+        @include desktop{display:none;height: min-content;margin-bottom: 0%;}
+        &#sub_softSkills{
+            margin-top: 30%;
+            @include tablet {margin-top: 10%;};
+            @include laptop {margin-top: 0%;}
         }
 
-        .liste{
-            width: 100%;
 
-            .no_deco{
-                list-style: none;
+        .title_subSection{
+            font-family: "Roboto Slab", serif;
+            text-transform: uppercase;
+            font-size: 13vw;
+            line-height: 90%;
+            color: transparent;
+            background: map-get($nuance-grey, ligth1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            text-shadow: 0px 8px 16px map-get($nuance-grey, ligth3);
+            margin: 0;
+            @include tablet {font-size: 9vw;};
+            @include laptop {font-size: 6vw;margin-top:15%};
+            @include desktop {font-size: 2vw;margin-top:3%};
+        };
+        .ico_slide{
+            flex-direction: column;
+
+            height: inherit;
+            width: inherit;
+            
+            margin-right: 5%;
+
+            .punt_blc{
+                width: 4vw;
             }
-        } 
+        }
     }
 }

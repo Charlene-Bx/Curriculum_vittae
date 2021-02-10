@@ -1,4 +1,5 @@
 @import "../variables/variables";
+@import "../variables/mediaQueries";
 
 @import "../base/onglets";
 @import "../base/presentation";
@@ -7,11 +8,10 @@
 @import "../base/portfolio";
 @import "../base/reseaux";
 
-@import "../variables/mediaQueries";
-@import "../component/animation";
 @import "../component/details";
 @import "../component/graphs";
 @import "../component/progressBar";
+
 
 // R U L E S //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -23,217 +23,122 @@ body{
 
 #grid_master{
     display: grid;
-    
 
-        grid-template-columns: 31% 3% 60% 3%;
-	    grid-template-rows: 20% 20% 20% 20% 15% 5%;
-
-    
+    grid-template-columns: 12% 76% 12%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
 
 	width: 100vw;
     height: 100vh;
     
     overflow: hidden;
 
-    @include sm{
-        grid-template-columns: 88% 12%;
-    }
+    @include tablet {
+        grid-template-columns: 10% 1fr 10%;
+	};
+    @include laptop {
+        grid-template-columns: 40% 5% 1fr 5%;
+	    grid-template-rows: 20% 20% 20% 20% 15% 5%;
+    };
+    @include desktop {        
+        grid-template-columns: 31% 3% 60% 3%;
+	    grid-template-rows: 20% 20% 20% 20% 15% 5%;
+    };
 };
 
 #gauche{
-	// grid-column: 1/2;
-	grid-row: 1/span 6;
-
-	// display: grid;
-	// // grid-template-columns: 91% 9%;
-	// // grid-template-rows: 20% 20% 20% 20% 20%;
-
-	color: $grey;
-
-	z-index: 7;
+    color: $grey;
+	grid-row: 1/span 5;
+    grid-column: 1/span 2;
+    position:relative;
+    z-index:2;    
+    @include laptop{
+        grid-row: 1/span 6;
+        grid-column: 1/span 1;
+        grid-template-columns: 91% 9%;
+	    grid-template-rows: 20% 20% 20% 20% 20%;
+    };
+    @include desktop {        
+        grid-row: 1/span 6;
+        grid-column: 1/span 1;
+        z-index:7;
+    };
 };
 
 #droite{
-	grid-column: 2/span 3;
-	grid-row: 1/span 6;
+    grid-row: 1/span 5;
+    grid-column: 1/span 3;
+    display: grid;
+    grid-template-columns: 12% 76% 12%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+    z-index:1;
+    @include laptop{
+        font-size: 1.8vw;
+        grid-row: 1/span 6;
+        grid-column: 2/span 3;
+        grid-template-columns: 8.4% 1fr 8.4%;
+    }
+    @include desktop {        
+        grid-column: 2/span 3;
+	    grid-row: 1/span 6;
+	    grid-template-rows: 15% 5% 20% 20% 20% 15% 5%;
+	    grid-template-columns: 4.5% 91% 4.5%;
+	    color: $grey;
+	    z-index: 6;
+    };
+    #cv{
+        display:none;
+        @include desktop {
+            display: initial;
+            grid-column: 1/span 3;
+            grid-row: 1/1;
+    
+            font-family: $roboto;
+            font-weight: lighter;
+            font-size: 3em;
+            text-align: center;
+            text-transform: uppercase;
+            color: darken(map-get($nuance-grey,ligth3),4%);
+        }
+    };
 
-	display: grid;
-	grid-template-rows: 15% 5% 20% 20% 20% 15% 5%;
-	grid-template-columns: 4.5% 91% 4.5%;
-	color: $grey;
+    .droite{
+        grid-row: 1/ span 5;
+        grid-column: 1/span 2;
+        @include desktop {
+            grid-row: 2/span 5;
+            color: map-get($nuance-color, ligth1 )
+        }
+    }
 
-	z-index: 6;
-
-	#cv{
-		grid-column: 1/span 3;
-		grid-row: 1/1;
-
-		font-family: $roboto;
-		font-weight: lighter;
-		font-size: 3em;
-		text-align: center;
-		text-transform: uppercase;
-		color: darken(map-get($nuance-grey,ligth3),4%);
-	}
-};
-
-
-.droite{
-
-	grid-column: 1/span 2;
-	grid-row: 2/span 5;
-
-	color: map-get($nuance-color, ligth1 )
-	// &:nth-last-child(3){
-	// 	top:140px;
-	// };
-	// &:nth-last-child(2){
-	// 	top:160px;
-	// };
-	// &:nth-last-child(1){
-	// 	top:180px;
-	// };
-};
+    @include tablet {
+        grid-template-columns: 10% 1fr 10%;
+	};
+}
 
 .container{
 	display: flex;
-	//FRONT LIBRAIRY ///////////////////!!!!\\\\\\\\\\\\\\\\\\\
+	
 	&.justify_right{
 		justify-content: flex-end;
-	};
-
-	&.align_center{
+    };
+    &.align_center{
 		align-items: center;
 	};
 };
 
-.section{
-	@include section-shadow();
-
-	height: 100%;
-	width: 100%;
-
-	position: relative;
-
-	box-sizing: border-box;
-
-    border-radius: 0px 0px 5px 0px;
-
-};
-
 a{
-    color:$color;
+    color:map-get($nuance-color, ligth1 );
     transition: color 0.2s;
-    &:hover{
-        color: map-get($nuance-color, ligth1 )
+
+    &:hover, :active{
+        color: $color
     }
-}
-// portfolio
-#portfolio{
 
-    background-color: map-get($nuance-grey,ligth1);
-    z-index: 2;
-    padding: 5% 5% 5% 15%;
-    overflow: scroll;
-
-    .projet{
-        width: 100%;
-        height: 20%;
-
-        display: flex;
-        justify-content: center;
-
-        position: relative;
-
-        &.projet_1{
-            z-index: 4;
-        };
-
-        &.projet_2{
-            z-index: 3;
-            top: 110px;
-        };	
-        
-        &.projet_3{
-            z-index: 2;
-            top: 220px;
-        };	
-
-        &.projet_4{
-            z-index: 1;
-            top: 330px;
-        };	
-
-        .projet_title{
-
-            position: absolute;
-            top: 80px;
-            width: 61%;
-
-            z-index: 1;
-
-            text-align: center;
-
-            h2{
-                font-family: $roboto;
-                text-transform: uppercase;
-                font-size: 4em;
-                text-shadow: 5px 5px 10px #000000;
-                line-height: 0%;
-            };
-
-            h3{
-                font-size: 1.5em;
-                text-shadow: 5px 5px 10px #000000;
-                line-height: 0%;
-            }
-        };
-
-    };
-
-    .border_img{
-        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-        background-color: map-get($nuance-grey,ligth1);
-        width: 85%;
-        height: 300px;
-    };
-
-    .portfolio_img{
-        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-        height: 98%;
-
-        opacity: 0.5;
-        filter: saturate(0);
-        transition: opacity 0.3s, filter 0.4s;
-
-        &:hover{
-            opacity: 1;
-            filter: none;	
-        };
-
-        &#fx_bubbles{
-            @include div-image(template1,cover);
-        };
-
-        &#planet_cbx{
-            @include div-image(template1,cover);
-        };
-
-        &#flying_fish{
-            @include div-image(template1,cover);
-        };
-    };
 };
 
-
-//FRONT LIBRAYRY (si parent grid) /////////////
-.row_1{
-	grid-row: 1/1;
-}
-.row_2{
-	grid-row: 2/2;
-};
-
-.row_3{
-	grid-row: 3/3;
+.section{
+    @include section-shadow();
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0px 0px 5px 0px;
 }

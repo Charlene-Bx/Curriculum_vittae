@@ -1,17 +1,49 @@
 // SPAN //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .quote{
     color:white;
-    font-size: 5em;
+    font-size: 17vw;
     display: block;
-    position: absolute;
+    position:relative;
+
     &#quote_1{
-        top: 63%;
-        left: 6%;
+        grid-row: 1/span 1;
+        text-align: left;
+        right: 6%;
     }
     &#quote_2{
-        right: 12%;
-        top: 82%;
-    }
+        grid-row: 3/span 1;
+        text-align: right;
+        bottom: 70%;
+        right: 4%;
+    };
+
+    @include tablet {
+		font-size: 12vw;
+        &#quote_1{
+            top: 30%;
+        }
+        &#quote_2{
+            bottom: 26%;
+        }
+	};
+
+    @include laptop{
+        font-size: 9vw;
+        &#quote_1{
+            top: 20%;
+        }
+    };
+    @include desktop{
+        font-size: 5em;
+        &#quote_1{
+            top: 28%;
+            right: 5%;
+        }
+        &#quote_2{
+            right: 7%;
+            bottom: 100%;
+        }
+    };
 };
 
 .orange{
@@ -25,7 +57,7 @@
 
 // ICONES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .grande_icone{
-    font-size: 5em;
+    font-size: 1em;
     color: white;
 }
 
@@ -45,27 +77,56 @@
 
 // BOUTONS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .more{
-    width: 40%;
+    width: 100%;
+    display:flex;
     justify-content: center;
-    height: 100%;
+    margin-top:3vh;
+    height: 5vh;
 }
 
-.ico_slide{
+.ico_slide#txt_introduction{
     width: 100%;
-    height: 10%;
+    height: 100%;
 
     display: flex;
     justify-content: center;
 
+    position: relative;
+    bottom: 50%;
+
     .punt_blc{
-        @include div-image(on_off,cover);
-        background-position-x: 100%;
-
-        width: 7%;
+        background-position: 50%;
+        width: 6vw;
         height: 100%;
-        margin: 0% 2% 0% 2%;
-
+        margin: 0% 2%;
+        @include div-image(off,contain);
+        @include tablet {width: 5vw;};
+        @include laptop{width: 3vw;};
+        @include desktop{width:1.7vw};
     };
-}
+};
+.ico_slide{
+    height: 7vh;
+    width: 100%;
 
+    display: flex;
+    justify-content: center;
+    @include desktop{height: 10%;}
+    .punt_blc{
+        background-position: 50%;
+        width: 6vw;
+        height: 100%;
+        margin: 0% 2%;
+        @include div-image(off,contain);
+        @include desktop{width: 7%;margin: 0% 2% 0% 2%;}
+    };
+};
 
+.liste{
+    width: 100%;
+    .no_deco{
+        list-style: none; 
+        padding: 0;
+        margin:0;
+    };
+};

@@ -2,14 +2,18 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Charlène Bonnardeaux</title>
 	<!-- fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
+	<!-- icones -->
+	<script src="https://kit.fontawesome.com/c52a326ad1.js" crossorigin="anonymous"></script>
 	<!-- style -->
-	<link rel="stylesheet" type="text/css" href="asset/normalize.css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="asset/style/style.css"> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet"  href="asset/style/style.css"/>
+	
 </head>
 <body>
 
@@ -20,7 +24,7 @@
 			<!-- bloc 1 (gauche)-->
 			<div id="presentation" class="section">
 
-				<div class="container row_1 align_center">
+				<div class="container row_1 align_center" id="presentation_img">
 					<div id="illustration">
 						<!-- image en css -->
 					</div>
@@ -69,7 +73,7 @@
 						<i class="far fa-user"></i>
 						<i class="far fa-paper-plane"></i>	
 					</div> -->
-					<div class="ico_slide">
+					<div class="ico_slide" id="txt_introduction">
 						<div class="punt_blc"></div>
 						<div class="punt_blc"></div>
 						<div class="punt_blc"></div>
@@ -81,7 +85,7 @@
 		</div>
 		<!-- ONGLET "web-developper" -->
 		<div class="onglet" id="onglet_1">
-			<p class="onglet__txt">web-develloper</p>
+			<p class="onglet__txt">web developer</p>
 		</div>
 		<!-- fin bloc gauche-->
 
@@ -92,8 +96,18 @@
 			<!----// C O M P E T E N C E S ----------------------------------------------------------------------------------------------------------->
 			<div class="droite">
 				<div id="competences" class="section">
-
 					<div id="compet_part1">
+
+						<!-- Hard Skills -->
+						<div class="subSection" id="hard_skills">
+							<div class="ico_slide" id="graph_hardSkills">
+								<div class="punt_blc"></div>
+								<div class="punt_blc"></div>
+								<div class="punt_blc"></div>
+								<div class="punt_blc"></div>
+							</div>
+							<h3 class="title_subSection">hard Skills</h3>
+						</div>
 
 						<!-- Front-end -->
 						<div class="chart_and_labels">
@@ -125,9 +139,6 @@
 								</div>
 							</div>
 						</div>
-
-
-
 						<!-- Back-end -->
 						<div class="chart_and_labels">
 							<div class="chart container align_center">
@@ -155,7 +166,13 @@
 						</div>
 
 						<!-- Adobe -->
-						<div class="chart_and_labels reverse">
+						<div class="chart_and_labels reverse" id="second_part">
+							<div class="chart container align_center">
+								<h4 class="chart_titre">Adobe</h4>
+								<canvas class="dognouth_chart chart_canvas" width="140" height="140" data-linewidth="12">
+								Oh,non! Ton navigateur ne prend pas en charge les élements canvas! J'en suis vraiment désolée...
+								</canvas>
+							</div>
 							<div class="labels">
 								<div class="label container align_center" data-pourcent="29" data-color="#DB692D">
 									<div class="label_img label_1"></div>
@@ -174,18 +191,19 @@
 
 								<div class="label container align_center" data-pourcent="21" data-color="#EFDFD6">
 									<div class="label_img label_4"></div>
-									<p>Dreamweaver</p>
+									<p>Xd</p>
 								</div>
 							</div>
+						</div>
+
+						<!-- Autres -->
+						<div class="chart_and_labels reverse">
 							<div class="chart container align_center">
-								<h4 class="chart_titre">Adobe</h4>
+								<h4 class="chart_titre">Autres</h4>
 								<canvas class="dognouth_chart chart_canvas" width="140" height="140" data-linewidth="12">
 								Oh,non! Ton navigateur ne prend pas en charge les élements canvas! J'en suis vraiment désolée...
 								</canvas>
 							</div>
-						</div>
-						<!-- Autres -->
-						<div class="chart_and_labels reverse">
 							<div class="labels">
 								<div class="label container align_center" data-pourcent="41" data-color="#DB692D">
 									<div class="label_img label_1"></div>
@@ -202,12 +220,6 @@
 									<p>Docker</p>
 								</div>
 							</div>
-							<div class="chart container align_center">
-								<h4 class="chart_titre">Autres</h4>
-								<canvas class="dognouth_chart chart_canvas" width="140" height="140" data-linewidth="12">
-								Oh,non! Ton navigateur ne prend pas en charge les élements canvas! J'en suis vraiment désolée...
-								</canvas>
-							</div>
 						</div>
 				</div>
 
@@ -217,23 +229,22 @@
 						<div class="grande_icone"><i class="far fa-comments"></i></div>
 						<div class="liste">
 							<ul class="no_deco">
-								<li>Français
+								<li>Anglais
 									<div class="progress_bar">
-										<div class="progress" data-progress="98"></div>
+										<div class="b_progress" data-progress="50"></div>
 									</div>
 								</li>
-								<li>Anglais</li>
-								<div class="progress_bar">
-									<div class="progress" data-progress="50"></div>
-								</div>
-								<li>Espagnol</li>
-								<div class="progress_bar">
-									<div class="progress" data-progress="30"></div>
-								</div>
+
+								<li>Espagnol
+									<div class="progress_bar">
+										<div class="b_progress" data-progress="30"></div>
+									</div>
+								</li>
+
 							</ul>
 						</div>
 					</div>
-
+					
 					<!-- manual skills
 					<div id="manual_skills" class="container">
 						<div class="medium_icone grey"><i class="fas fa-hammer"></i></i></div>
@@ -246,7 +257,11 @@
 					</div> -->
 
 					<!-- soft skills-->
-					<div id="soft_skills" class="container align_center">
+					<div id="soft_skills">
+						<div class="subSection" id="sub_softSkills">
+							<h3 class="title_subSection">Soft Skills</h3>
+						</div>
+
 						<div class="liste">
 							<ul class="no_deco">
 								<li>Esprit d'équipe
@@ -288,119 +303,163 @@
 
 			<!----// P A R C O U R S ---------------------------------------------------------------------------------------------------------------->
 			<div class="droite">
+				<div id="parcours" class="section">			
+					
+					<div class="parcours_part1">
+						<!-- 2021 reconversion professionnelle-->
+						<div class="subSection" id="experiences">
+							<h3 class="title_subSection">experiences</h3>
+						</div>
 
-			<div id="parcours" class="section">			
+						<div class="parcours_dropdow">
+							<div class="box" id="reconversion">
+							
+								<div class="annee now">
+									<p>2021</p>
+									<p>2020</p>
+								</div>			
+								<div class="box_part1">
+									<h3>Reconversion </br>
+										professionelle</h3>
+									<p class="sub_h3">Formation BeCode <span class="italic">(Bruxelles)</span></p>
+								</div>
+							</div>
+		
+							<div class="box_hidden" id="reconversion_explication" >
+								<p>Après plusieurs années dans le milieu H.O.R.E.C.A, j’ai entrepris une réorientation vers le web-developement. </br>
+									Aujourd'hui, à la suite d'une formation professionnalisante, j'ai aquéris les connaissances nécessaires pour pouvoir intégrer le milieu. </p>
+								<div class="more container align_center" id="en_savoir_plus"><i id="plus" class="little_icone fas fa-plus"></i></div>
+							</div>
+						</div>
 
-				<div class="parcours_part1">
-					<!-- 2021 reconversion professionnelle-->
-					<div class="box" id="reconversion">
+						<div class="parcours_scroll">
+												<!-- 2020 maison du peuple-->
+						<div class="box">			
+							<div class="annee post">
+								<p>2020</p>
+								<p>2015</p>
+							</div>			
+							<div class="box_part1">
+								<h4>Responsable </br>
+									des équipes</h4>
+								<p class="sub_h4">Café Maison du Peuple <span class="italic">(Bruxelles)</span></p>
+							</div>			
+						</div>			
+						<!-- 2015 boltanski-->
+						<div class="box">			
+							<div class="annee post">
+								<p>2015</p>
+								<p>2014</p>
+							</div>
 						
-						<div class="annee now">
-							<p>2021</p>
-							<p>2020</p>
-						</div>			
-						<div class="box_part1">
-							<h3>Reconversion </br>
-								professionelle</h3>
-							<p class="sub_h3">Formation BeCode <span class="italic">(Bruxelles)</span></p>
+							<div class="box_part1">
+								<h4>Agent d'acceuil</br>
+									Exposition Boltanski</h4>
+								<p class="sub_h4">Grand Hornu <span class="italic">(Mons)</span></p>
+							</div>
 						</div>
-						<div class="hidder"></div>
-						<div id="reconversion_explication" class="box_hidden">
-							<p>Après plusieurs années dans le milieu H.O.R.E.C.A, j’ai entrepris une réorientation vers le web-developement. </br>
-								Aujourd'hui, à la suite d'une formation professionnalisante, j'ai aquéris les connaissances nécessaires pour pouvoir intégrer le milieu. </p>
-							<div class="more container align_center" id="en_savoir_plus"><i id="plus" class="little_icone fas fa-plus"></i></div>
+						
+						<!-- 2014 catimini-->
+						<div class="box">			
+							<div class="annee post">
+								<p>2014</p>
+								<p>2012</p>
+							</div>
+						
+							<div class="box_part1">
+								<h4>Vendeuse</br>
+									Hôtesse de caisse</h4>
+								<p class="sub_h4">Catimini <span class="italic">(Bruxelles)</span></p>
+							</div>
+						
 						</div>
-					</div>
+						
+						<!-- 2012 carrefour-->
+						<div class="box">			
+							<div class="annee post">
+								<p>2012</p>
+								<p>2011</p>
+							</div>
+						
+							<div class="box_part1">
+								<h4>Etalagiste</br>
+									Boulangerie</h4>
+								<p class="sub_h4">Carrefour <span class="italic">(Bruxelles)</span></p>
+							</div>
+						
+						</div>
+						</div>
 
-
-					<!-- 2020 maison du peuple-->
-					<div class="box">			
-						<div class="annee post">
-							<p>2020</p>
-							<p>2015</p>
-						</div>			
-						<div class="box_part1">
-							<h4>Responsable </br>
-								des équipes</h4>
-							<p class="sub_h4">Café Maison du Peuple <span class="italic">(Bruxelles)</span></p>
-						</div>			
-					</div>			
-					<!-- 2015 boltanski-->
-					<div class="box">			
-						<div class="annee post">
-							<p>2015</p>
-							<p>2014</p>
-						</div>
-					
-						<div class="box_part1">
-							<h4>Agent d'acceuil</br>
-								Exposition Boltanski</h4>
-							<p class="sub_h4">Grand Hornu <span class="italic">(Mons)</span></p>
-						</div>
-					</div>
-					
-					<!-- 2014 catimini-->
-					<div class="box">			
-						<div class="annee post">
-							<p>2014</p>
-							<p>2012</p>
-						</div>
-					
-						<div class="box_part1">
-							<h4>Vendeuse</br>
-								Hôtesse de caisse</h4>
-							<p class="sub_h4">Catimini <span class="italic">(Bruxelles)</span></p>
-						</div>
-					
-					</div>
-					
-					<!-- 2012 carrefour-->
-					<div class="box">			
-						<div class="annee post">
-							<p>2012</p>
-							<p>2011</p>
-						</div>
-					
-						<div class="box_part1">
-							<h4>Etalagiste</br>
-								Boulangerie</h4>
-							<p class="sub_h4">Carrefour <span class="italic">(Bruxelles)</span></p>
-						</div>
-					
-					</div>
-
-				</div>	
-
-				<div class="parcours_part2">
-					<div class="container justify_right ">
-						<div class="informations">
-							<h3>Communication visuelle</h3>
-							<p>Le Carré des arts</p>
-						</div>
-						<div class="medium_icone grey container align_center"><i class="fas fa-book"></i></div>
-					</div>			
-					<div class="container justify_right">
-						<div class="informations">
-							<h3>Sculpture/Moulage</h3>
-							<p>Ateliers Fx Bubbles</p>
-						</div>
-						<div class="medium_icone grey container align_center"><i class="fas fa-toolbox"></i></i></div>
-					</div>			
-					<div class="container justify_right">
-						<div class="informations">
-							<h3>Illustration</h3>
-							<p>Planet CBX</p>
-						</div>
-						<div class="medium_icone grey container align_center"><i class="fas fa-paint-brush"></i></div>
 					</div>	
-					
-					
-					<!-- <div id="niveauEtudes">
-						<h5>Niveau d'étude:</h5>
-						<p>C.E.S.S <span class="italic">(2009)</span></p>
-					</div> -->
+
+					<div class="parcours_part2">
+
+						<div class="subSection" id="etudes">
+							<h3 class="title_subSection">etudes</h3>
+						</div>
+
+						<div class="tilde">
+							<div class="informations">
+								<h4 class='etudes_date'>2015/12</h4>
+								<h3>Communication visuelle</h3>
+								<p>Le Carré des arts </br>(Mons)</p>
+							</div>
+							<div class="informations">
+								<h4 class='etudes_date'>2012/11</h4>
+								<h3>Illustration narrative</h3>
+								<p>Beaux-Arts </br>(Bruxelles)</p>
+							</div>
+							<div class="informations">
+								<h4 class='etudes_date'>2011/09</h4>
+								<h3>Stylisme Modélisme</h3>
+								<p>Francisco Ferrer </br>(Bruxelles)</p>
+							</div>
+							<div class="informations" id="cess">
+								<h4 class='etudes_date'>2009/2006</h4>
+								<h3>CESS - Arts/Sciences</h3>
+								<p>Beaux-Arts </br>(Bruxelles)</p>
+							</div>
+						</div>			
+						
+						
+						<!-- <div id="niveauEtudes">
+							<h5>Niveau d'étude:</h5>
+							<p>C.E.S.S <span class="italic">(2009)</span></p>
+						</div> -->
+					</div>
+
+					<div class="parcours_part3">
+
+						<div class="subSection" id="hobby">
+							<h3 class="title_subSection">hobby</h3>
+						</div>
+
+						<div class='items_hobby'>
+							<div class="container">
+								<div class="medium_icone grey container align_center"><i class="fas fa-toolbox"></i></i></div>
+
+								<div class="informations">
+									<h3>Sculpture/Moulage</h3>
+									<p>Ateliers Fx Bubbles</p>
+								</div>
+							
+							</div>			
+							<div class="container">
+
+								<div class="medium_icone grey container align_center"><i class="fas fa-paint-brush"></i></div>
+
+								<div class="informations">
+									<h3>Illustration</h3>
+									<p>Planet CBX</p>
+								</div>
+							
+							</div>	
+						</div>
+
+
+
+					</div>
 				</div>
-			</div>
 			</div>
 			<!--// fin parcours ------------------------------------------------------------------------------------------------------------------->
 			<!-- O N G L E T "parcours"-->
@@ -412,50 +471,58 @@
 			<div class="droite">
 				<div id="portfolio" class="section">
 
-					<!--projet 1-->
-					<div class="projet projet_1">
+					<div id="projet_scroll">
 
-						<div class="projet_title">
-							<h2 class="projet_name">Fx Bubbles</h2>
-							<h3 class="sub_name">Site de e-Learning</h3>
+						<!--projet 1-->
+						<div class="projet projet_1">
+
+							<div class="projet_title">
+								<h2 class="projet_name">Fx Bubbles</h2>
+								<h3 class="sub_name">Site de e-Learning</h3>
+							</div>
+
+							<div class="border_img">
+								<div id="fx_bubbles" class="portfolio_img">
+									<!--IMAGE EN BACKGROUND CSS-->
+								</div>
+							</div>
+
 						</div>
 
-						<div class="border_img">
-							<div id="fx_bubbles" class="portfolio_img">
-								<!--IMAGE EN BACKGROUND CSS-->
+						<!--projet 2-->
+						<div class="projet projet_2">
+
+							<div class="projet_title">
+								<h2 class="projet_name">Planet CBX</h2>
+								<h3 class="sub_name">Site vitrine pour salon de tatouage</h3>
+							</div>
+						
+							<div class="border_img">
+								<div id="planet_cbx" class="portfolio_img">
+									<!--IMAGE EN BACKGROUND CSS-->
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<!--projet 2-->
-					<div class="projet projet_2">
+						<!--projet 3-->
+						<div class="projet projet_3">
 
-						<div class="projet_title">
-							<h2 class="projet_name">Planet CBX</h2>
-							<h3 class="sub_name">Site vitrine pour salon de tatouage</h3>
+							<div class="projet_title">
+								<h2 class="projet_name">Flying Fish</h2>
+								<h3 class="sub_name">Dino Jump réapproprié</h3>
+							</div>
+						
+							<div class="border_img">
+								<div id="flying_fish" class="portfolio_img">
+
+								</div>
+							</div>
 						</div>
+
 					
-						<div class="border_img">
-							<div id="planet_cbx" class="portfolio_img">
-								<!--IMAGE EN BACKGROUND CSS-->
-							</div>
-						</div>
 					</div>
-
-					<!--projet 3-->
-					<div class="projet projet_3">
-
-						<div class="projet_title">
-							<h2 class="projet_name">Flying Fish</h2>
-							<h3 class="sub_name">Dino Jump réapproprié</h3>
-						</div>
 					
-						<div class="border_img">
-							<div id="flying_fish" class="portfolio_img">
 
-							</div>
-						</div>
-					</div>
 				</div>
 
 			</div>
@@ -476,15 +543,15 @@
 				<a href="https://github.com/Charlene-Bx" target="_blank"><i class="fab fa-github-square"></i></a>
 			</div>
 
-</div>
+		</div>
 	</div>
 
 <!-- S C R I P T S -------------------------------------------------------------------------------------------------------------------------------->
 
-<script src="https://kit.fontawesome.com/c52a326ad1.js" crossorigin="anonymous"></script>
+
 <script src="asset/js/index.js"></script>
 <script src="asset/js/graph.js"></script>
 <script src="asset/js/progressBar.js"></script>
-<script src="asset/js/onglet.js"></script>
+<script src='asset/js/onglet.js'></script>
 
 </body>

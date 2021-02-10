@@ -1,49 +1,49 @@
-.hover-white{
-    transition: color 0.3s;
-    &:hover{
-        color:white;
-    }
-};
+// .hover-white{
+//     transition: color 0.3s;
+//     &:hover{
+//         color:white;
+//     }
+// };
 
-.txt-slide{
-    &:not(#first){
-        display: none;
-    };
-    &#first{
-        display: inherit;
-    }
-};
+// .txt-slide{
+//     &:not(#first){
+//         display: none;
+//     };
+//     &#first{
+//         display: inherit;
+//     }
+// };
 
-.link-hover{
-    color: map-get($nuance-color, ligth1);
-    transition: color 0.3s;
-    &:hover{
-        color:map-get($nuance-color, ligth2 );
-    }
-    &:active{
-        color:map-get($nuance-color, ligth3 );
-    }
-}
+// .link-hover{
+//     color: map-get($nuance-color, ligth1);
+//     transition: color 0.3s;
+//     &:hover{
+//         color:map-get($nuance-color, ligth2 );
+//     }
+//     &:active{
+//         color:map-get($nuance-color, ligth3 );
+//     }
+// }
 
-// KEY FRAMES ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@keyframes fadeInOpacity {
-	0% {
-        opacity: 1;
-	}
-	100% {
-        opacity: 0;
-	}
-};
+// // KEY FRAMES ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// @keyframes fadeInOpacity {
+// 	0% {
+//         opacity: 1;
+// 	}
+// 	100% {
+//         opacity: 0;
+// 	}
+// };
 
-@keyframes moveDiv {
-    100% {
-        padding-left: 91%;
-    }
-};
+// @keyframes moveDiv {
+//     100% {
+//         padding-left: 91%;
+//     }
+// };
 
-@keyframes agitBulle {
-    100% {
-        top: 10%;
-    }
-};
+// @keyframes agitBulle {
+//     100% {
+//         top: 10%;
+//     }
+// };
 

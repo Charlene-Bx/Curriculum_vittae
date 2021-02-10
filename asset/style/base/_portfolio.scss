@@ -1,0 +1,115 @@
+#portfolio{
+
+    background-color: map-get($nuance-grey,ligth1);
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: 15% 6% 10% 15%;
+    @include desktop{padding: 5% 6% 5% 20%;}
+    #projet_scroll{
+        height: 100%;
+        overflow: scroll;
+        @include desktop{overflow-x: initial;}
+    }
+
+    .projet{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        height: 40vh;
+        margin-bottom: -30%;
+        @include tablet{margin-bottom: -15%;};
+        @include laptop{margin-bottom: -20%;}
+        @include desktop{margin-bottom: -10%;}
+        &.projet_1{
+            z-index: 4;
+        };
+
+        &.projet_2{
+            z-index: 3;
+            
+        };	
+        
+        &.projet_3{
+            z-index: 2;
+            
+        };	
+
+        &.projet_4{
+            z-index: 1;
+            
+        };	
+
+        .projet_title{
+            margin-top: 15%;
+            position: absolute;
+            width: 80%;
+
+            z-index: 1;
+
+            text-align: center;
+
+            h2{
+                font-family: $roboto;
+                text-transform: uppercase;
+                font-size: 7vw;
+                @include tablet{ font-size: 5vw;}
+                @include laptop{ font-size: 4vw;}
+                @include desktop{ font-size: 3vw;}
+                text-shadow: 5px 5px 10px #000000;
+                line-height: 0%;
+            };
+
+            h3{
+                font-size: 2.5vw;
+                @include laptop{font-size: 1em;}
+                text-shadow: 5px 5px 10px #000000;
+                line-height: 0%;
+            }
+        };
+
+    };
+
+    .border_img{
+        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+        background-color: map-get($nuance-grey,ligth1);
+        width: 100%;
+        height: 100%;
+
+    };
+
+    .portfolio_img{
+        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+        height: 95%;
+
+        opacity: 0.5;
+        filter: saturate(0);
+        transition: opacity 0.3s, filter 0.4s;
+
+        &:hover{
+            opacity: 1;
+            filter: none;	
+        };
+
+        &#fx_bubbles{
+            @include div-image(template1,cover);
+        };
+
+        &#planet_cbx{
+            @include div-image(template1,cover);
+        };
+
+        &#flying_fish{
+            @include div-image(template1,cover);
+        };
+    };
+};

@@ -1,34 +1,104 @@
 #parcours{
     background-color: map-get($nuance-grey,ligth2);
-
-    display: grid;
-    grid-template-columns: 50% 40%;
-
+    font-size: 3vw; 
     z-index: 5;
-    padding: 5% 10% 5% 0%;
+    padding: 15% 0%;
+    height: 100%;
+    overflow: scroll;
+    @include tablet {
+        padding: 6% 0%;
+        font-size: 2vw;
+    };
+    @include laptop {
+        padding:0;
+        font-size: 1.7vw;
+    };
+    @include desktop {
+        overflow: initial;
+        font-size: 0.8vw;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: 65% 1fr;
+        padding: 5% 0%;};
+    .subSection{
+        display:flex;
+        align-items: center;
+        margin-bottom: 15%;
+        @include desktop{display: none;}
+        &#etudes{
+            margin: 20% 0% 11% 0%;
+            @include laptop {margin: 5% 0% 10% 0%;};
+        }
+
+        .title_subSection{
+            font-family: "Roboto Slab", serif;
+            text-transform: uppercase;
+            font-size: 9vw;
+            line-height: 90%;
+            color: transparent;
+            background: map-get($nuance-grey, ligth1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            text-shadow: 0px 8px 16px map-get($nuance-grey, ligth2);
+            margin: 0;
+            padding-left: 20%;
+            @include tablet { font-size: 7vw;}
+            @include laptop {padding-left: 18%;font-size: 6vw;margin-top:9%};
+        };
+    }
 
     .parcours_part1{
         grid-column: 1/span 1;
+        
+        .parcours_dropdow{
+            position: relative;
+            top: 0%;
+            margin-bottom: 2%;
+            @include desktop {margin-bottom: 0 ;grid-row: 1/span 2;}
 
-        display: grid;
-        grid-template-rows: 23% repeat(4,16%) 1fr;
-        grid-gap: 1.5%;
+            .box_hidden{
+                grid-row: 1/span 1;
+
+                position: absolute;
+                bottom:0%;
+
+                z-index: 1;
+    
+                display: none;
+                flex-direction: column;
+                padding-left:17.2%;
+                background-color: darken(map-get($nuance-grey, ligth2),9%);
+            };
+        }
+
+        .parcours_scroll{
+            overflow: scroll;
+            height: 35vw;
+            @include tablet {overflow: initial; height: initial;}
+            @include laptop {overflow: initial; height: initial;}
+            @include desktop {overflow: initial; height: initial;}
+        }
 
         .box{
         z-index: 2;
 
-        height: 100%;
-        width: 100%;
-
         position: relative;
+        top:0%;
 
         display: flex;
 
         background-color: darken(map-get($nuance-grey, ligth2),3%);
       
         padding-left: 15%;
+        @include laptop {padding-left: 12%;};
+        @include desktop {padding-left: 5%;}
 
-
+        &:not(#reconversion){
+            margin: 15% 0%;
+            @include laptop {margin: 2% 0%;};
+            @include desktop {margin: 2% 11%;height: 10vh;min-height: min-content; padding:1%}
+        }
 
             .box_part1{
                 width: 100%;
@@ -65,35 +135,10 @@
 
             }
         };
-        .box_hidden{
-            grid-row: 1/span 1;
-            position:absolute;
-            z-index: 1;
-
-            display: flex;
-            //pour le deployé
-            // padding-left: 91%;
-
-            padding-left:17.2%;
-
-            width: 80%;
-            height: 100%;
-
-            background-color: darken(map-get($nuance-grey, ligth2),9%);
-        };
-        .hidder{
-            width: 85%;
-            height: 100%;
-            position:absolute;
-            z-index: 2;
-
-            display: flex;
-
-            background-color: darken(map-get($nuance-grey, ligth2),3%);
-        };
 
         .annee{
             font-size: 2em;
+            @include laptop {width: 1.7em;}
             font-family: "Roboto Slab", serif;
             font-weight: lighter;
             line-height: 5px;
@@ -108,6 +153,7 @@
                 position: relative;
                 bottom: 40px;
                 width: 10em;
+                @include laptop {width: 7em;}
                 text-align: right;
                 right: 2.6em;
             };
@@ -118,149 +164,88 @@
                 bottom: 8px;
                 margin-left: 1.7%;
                 text-align: right;
+                @include desktop{margin-left: 6.7%;}
             }
         }
     }
     .parcours_part2{
-        grid-column: 2/span 1;
-
         position: relative;
+
+        .tilde{
+            display: grid;
+            grid-template-columns: 48% 48%;
+            grid-template-rows: 48% 48%;
+            grid-gap: 4%;
+
+            padding: 0% 6% 23% 14%;
+            @include laptop{padding: 0% 6% 5% 14%;}
+            @include desktop{
+                grid-column: 2/span 1;
+                grid-row: 1/span 1;
+            }
+            .informations{
+                background-color: darken(map-get($nuance-grey, ligth2),3%);
+                padding-left: 10%;
+                
+
+                height: fit-content;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include laptop{margin-bottom: 3%;}
+                &#cess{
+                    background-color: map-get($nuance-grey, ligth0);
+                };
+
+                h4{
+                    font-family: "Roboto Slab", serif;
+                    font-weight: lighter;
+                    color: lighten(map-get($nuance-grey,ligth2),15%);
+                }
+
+                h3{
+                    display: block;
+                    position: relative;
+                    margin:0;
+                    font-size: 1.2em;
+                    color:darken(map-get($nuance-color, ligth3),20%)
+                }
+
+            }
+        }
+    }
+
+    .parcours_part3{
+        display:flex;
+        flex-direction: column;
+        height: 60%;
+        @include desktop{
+            grid-column: 2/span 1;
+            grid-row: 2/span 1;
+        }
+        #hobby{
+            margin-bottom: 6%;
+        }
+
+        .items_hobby{
+            padding: 0% 14% 10%;
+
+            div{
+                align-items: center;
+
+                .medium_icone{
+                    padding-right: 10%;
+                }
+            }
+
+            h3{
+                font-size: 1.2em;
+                color:darken(map-get($nuance-color, ligth3),20%)
+            }
+        }
         
-        left: 20%;
-        top: 30%;
     }
 }
 
 
-//     .annee{
-//         font-size: 2em;
-//         font-family: "Roboto Slab", serif;
-//         font-weight: lighter;
-//         line-height: 5px;
-
-//         &.now{
-//             background-color: map-get($nuance-grey, ligth0);
-//             clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
-//             padding: 0% 5%;
-//             height: 3.4em;
-//             position: relative;
-//             bottom: 40px;
-//             width: 10em;
-//             text-align: right;
-//             right: 2.6em;
-//         };
-
-//         &.post{
-//             margin-right: 14%;
-//             position: relative;
-//             bottom: 8px;
-//             margin-left: 1.7%;
-//             text-align: right;
-//         }
-//     }
-
-//     .box{
-//         &#reconversion, &#mdp{
-//             width:46.2%;
-//         };
-//         z-index: 2;
-//         height: 20%;
-//         width: 93%;
-//         position: relative;
-//         right: 45px;
-//         display: flex;
-//         background-color: darken(map-get($nuance-grey, ligth2),3%);
-//         padding: 1% 3% 1% 10%;
-//         margin: 0% 0% 2% 0%;
-
-//         &.ajustement{
-//             padding-left: 22.9%;
-//             height: 14%;
-//         }
-
-//         .box_part1{
-//             width: 100%;
-//             position: relative;
-//             right: 6%;
-
-//             h3{
-//                 font-size: 1.6em;
-//                 color:map-get($nuance-color, ligth3);
-//                 display: block;
-//                 position: relative;
-//                 bottom: 15px;
-//             };
-
-//             .sub_h3{
-//                 color:darken(map-get($nuance-color, ligth3),20%);
-//                 position: relative;
-//                 bottom: 20px;
-//             }
-
-//             h4{
-//                 display: block;
-//                 position: relative;
-//                 padding-left: 11%;
-//                 bottom: 15px;
-//                 font-size: 1.2em;
-//                 color:darken(map-get($nuance-color, ligth3),20%)
-//             }
-
-//             .sub_h4{
-//                 padding-left: 11%;
-//                 font-size: 0.8em;
-//                 position: relative;
-//                 bottom: 30px;
-//             }
-//         }
-//     };
-
-//     .box_part2{
-//         z-index: 1;
-
-//         width: 42%;
-//         height: 19.2%;
-//         padding: 0% 2% 0% 10%;
-
-//         position: absolute;
-//         top: 63px;
-
-//         background-color: darken(map-get($nuance-grey, ligth2),6%);
-//         color:map-get($nuance-grey, ligth0 );
-
-//         ul{
-//             padding:5%;
-//         }
-//     }
-
-//     .parcours_part1{
-//         width: 50%;
-        
-//         #niveauEtudes{
-//             color: map-get($nuance-grey, ligth0);
-//             display: flex;
-//             h5{
-//                 font-size: 1.2em;
-//                 position: relative;
-//                 bottom: 20px;
-//                 padding: 0% 3% 0% 16%;
-//             }
-//         }
-//     };
-//     .parcours_part2{
-//         padding: 0% 0% 0% 12%;
-//         text-align: right;
-//         width:38%;
-//         height: 27.4em;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-
-//         .informations{
-//             margin-right:10%
-//         }
-//     }
-
-
-
-// }
